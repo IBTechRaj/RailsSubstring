@@ -4,3 +4,40 @@
 
 <h1>Welcome, <%= name %> </h1>
 <p>Find me in app/views/home/index.html.erb</p>
+
+<div class="container">
+  <div class="py-5">
+    <div class="card">
+      <div class="card-body">
+      <h4 class="card-title"> Enter URL to shorten </h4>
+      <%= form_for  @substring do  |f| %>
+        <%= f.label :str1 %><br>
+          <%= f.text_field :str1, class: "form-control",
+          placeholder: "Enter String" %>
+          <%= f.label :str2 %><br>
+          <%= f.text_field :str2, class: "form-control",
+          placeholder: "Enter pattern to search" %>
+          <%= f.submit "Search", class: 'btn btn-primary mt-2' %>
+      <% end %>
+      </div>
+      <div class="card-body">
+        <div id="error-message">
+
+        </div>
+      </div>
+
+      # <div class="card-body">
+      # <h4 class="card-title"> The Shortened Url: </h4>
+      #   <div  data-controller="clipboard">
+      #     <input id="short-link" data-clipboard-target="source"  type="text"  readonly>
+      #   <button data-action="clipboard#copy" class="btn btn-success">Copy </button>
+      #   </div>
+      # </div>
+    </div>
+  </div>
+    
+ 
+
+
+  
+</div>

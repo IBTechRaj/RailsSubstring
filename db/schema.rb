@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_27_105116) do
+ActiveRecord::Schema.define(version: 2021_06_27_145040) do
+
+  create_table "inputs", force: :cascade do |t|
+    t.text "input1"
+    t.text "input2"
+    t.text "result_string"
+    t.integer "result_count"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "substrings", force: :cascade do |t|
+    t.text "str1"
+    t.text "str2"
+    t.text "result_str"
+    t.integer "result_digits"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
