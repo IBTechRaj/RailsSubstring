@@ -1,0 +1,9 @@
+<h1> result </h1>
+
+<%= button_to "Add new substring", new_substring_path, method: :get %>
+<ul>
+  <% @substrings.each do |substring| %>
+    <li><%= link_to substring.str2, new_substring_path(substring) %></li>
+  <%end%>
+<ul>
+
